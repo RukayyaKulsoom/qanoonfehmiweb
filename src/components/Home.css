@@ -1,0 +1,23 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Styles for the sidebar */
+  .sidenav {
+    flex: 0 0 250px;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+  }
+  
+  /* Styles for the main content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+  }
+  
