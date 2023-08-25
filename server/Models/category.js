@@ -8,7 +8,9 @@ const categorySchema = new mongoose.Schema({
     required: true
   
   },
- 
+  count: {
+    type: Number, // Change the data type to Number
+  },
 });
 
 const category = mongoose.model('category', categorySchema);

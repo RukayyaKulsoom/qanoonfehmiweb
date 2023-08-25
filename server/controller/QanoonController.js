@@ -234,15 +234,13 @@ const Updatecategory= async (req, res) => {
 const categorydata = await Category.findById(id);
 if (categorydata) {
   categorydata.category = category
-
-
     const updatecategory = await categorydata.save()
     res.json(updatecategory)
 } else {
     console.log("category Not Updated");
      res.json("category Not Updated");
 }
-};
+}; 
 module.exports = {
   Allvolume,
   Createvolume,
@@ -261,5 +259,5 @@ module.exports = {
   Deletecategory,
   Allcategory,
   Updatecategory,
-
 };
+
