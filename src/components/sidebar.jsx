@@ -130,7 +130,7 @@ const SideBar = () => {
 
 
             <NavLink exact to="/displayfeedbacks" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="book">
+              <CDBSidebarMenuItem icon="sticky-note">
                 <h5
                   className="pt-2"
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}
@@ -142,7 +142,7 @@ const SideBar = () => {
             </NavLink>
 
             <NavLink exact to="/addcategory" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="book">
+              <CDBSidebarMenuItem icon="th-large">
                 <h5
                   className="pt-2"
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}
@@ -154,7 +154,7 @@ const SideBar = () => {
             </NavLink>
 
             <NavLink exact to="/allcategories" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="book">
+              <CDBSidebarMenuItem icon="th">
                 <h5
                   className="pt-2"
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}

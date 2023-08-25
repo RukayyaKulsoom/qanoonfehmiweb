@@ -2,7 +2,8 @@ import React from 'react'
 import { LineChart, Line, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { BarChart, Bar, Cell, XAxis, YAxis  } from 'recharts';
 import Navbar from "./navbar";
-import { BsPatchQuestion,BsGraphUp ,BsPercent } from 'react-icons/bs';
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
+import { BiCategory ,BiNote} from 'react-icons/bi';
 import { useState, useEffect, useRef } from "react";
 import { Row, Col ,Card} from 'react-bootstrap';
 import './App.css';
@@ -10,7 +11,30 @@ import axios from "axios";
 
 const Main = () => {
   const [categories, setcategories] = useState([]);
+  const [messages, setmessages] = useState([]);
+  const [feedbacks, setfeedbacks] = useState([]);
 
+
+  const getfeedbacks = async (e) => {
+
+    await axios.get("http://localhost:3000/getallfeedbacks").then((response) => {
+console.log(response.data)
+      setfeedbacks(response.data);
+      //  console.log(feedbacks)
+
+
+    });
+  }
+  const getmessages = async (e) => {
+
+    await axios.get("http://localhost:3000/getallmessage").then((response) => {
+
+      setmessages(response.data);
+      //  console.log(messages)
+
+
+    });
+  }
   const getcategories = async (e) => {
 
     await axios.get("http://localhost:3000/getallcategories").then((response) => {
@@ -23,14 +47,16 @@ const Main = () => {
   }
   useEffect(() => {
     getcategories()
-
+    getmessages()
+    getfeedbacks()
   }, [])
   // Transform categories data for the chart
 // Extract category names for the chart
 const chartData = categories.map((categories) => ({
 
-  name: categories.category, 
- 
+  "name":categories.category,
+  "uv":categories.count,
+
 }));
 const data=[{
   "name":"Inheritance",
@@ -90,26 +116,26 @@ const data=[{
           <Card className="card" style={{ background: '#1D4537', color: 'white', margin:10 }}>
             <Card.Body>
             <h2 className="responsive-heading">Question Asked</h2>
-              <p>{categories.length}</p>
-              <BsPatchQuestion className="tainmodel2" size="2rem" />
+              <p>{messages.length}</p>
+              <AiOutlineQuestionCircle className="tainmodel2" size="2rem" />
             </Card.Body>
           </Card>
         </Col>
         <Col md={4} sm={6} xs={12} >
           <Card className="card"  style={{ background: '#1D4537', color: 'white', margin:10 }}>
             <Card.Body>
-              <h2 className="responsive-heading">Acurracy</h2>
-              <p>78.8%</p>
-              <BsPercent className="tainmodel2" size="2rem" />
+              <h2 className="responsive-heading">Current Categories</h2>
+              <p>{categories.length}</p>
+              <BiCategory className="tainmodel2" size="2rem" />
             </Card.Body>
           </Card>
         </Col>
         <Col md={4} sm={6} xs={12}>
           <Card className="card"  style={{ background: '#1D4537', color: 'white', margin:10 }}>
             <Card.Body>
-              <h2 className="responsive-heading">App Usage</h2>
-              <p>78.8%</p>
-              <BsGraphUp className="tainmodel2"  size="2rem" />
+              <h2 className="responsive-heading">Feedbacks</h2>
+              <p>{feedbacks.length}</p>
+              <BiNote className="tainmodel2"  size="2rem" />
             </Card.Body>
           </Card>
         </Col>
@@ -124,17 +150,14 @@ const data=[{
             <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
           </LineChart>
         </Col> */}
-
-      
-
         
-        <Col md={6} sm={12} xs={12} style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', margin: '20px' }}>
+        <Col md={6} sm={12} xs={12} style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', margin: '30px' }}>
           <BarChart
-            width={500}
+            width={600}
             height={300}
             data={chartData}
             margin={{
-              top: 5,
+              top: 20,
               right: 30,
               left: 20,
               bottom: 5,
@@ -142,10 +165,10 @@ const data=[{
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
-            <YAxis />
+            <YAxis datakey="uv"/>
             <Tooltip />
             <Legend />
-            <Bar dataKey="uv" fill="#1D4537" />
+            <Bar dataKey="uv" fill="#1D4537"  barSize={40} barGap={15}/>
           </BarChart>
         </Col>  <Row>
         </Row>
