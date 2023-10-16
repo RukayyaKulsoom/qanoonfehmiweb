@@ -11,7 +11,6 @@ const categorySchema = new mongoose.Schema({
   count: {
     type: Number,
    
-  
   },
  
 });

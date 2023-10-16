@@ -21,7 +21,7 @@ const forgotPassword = async (req, res, next) => {
   
     const resetUrl = `http://localhost:3001/resetpassword/${resetToken}`
    
-  
+
     const message = `You are receiving this email because you (or someone else) has requested the reset of a password. Paste this URL in your browser: \n\n ${resetUrl}`;
   
     try {

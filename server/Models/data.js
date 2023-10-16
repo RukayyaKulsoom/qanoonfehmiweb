@@ -21,4 +21,3 @@ const volumesSchema = new mongoose.Schema({
 const volumes = mongoose.model('volumes', volumesSchema);
 
 module.exports = volumes;
-

@@ -5,7 +5,8 @@ import Navbar from "./navbar";
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import { BiCategory ,BiNote} from 'react-icons/bi';
 import { useState, useEffect, useRef } from "react";
-import { Row, Col ,Card} from 'react-bootstrap';
+
+import { Container, Row, Col, Button ,Card} from 'react-bootstrap';
 import './App.css';
 import axios from "axios";
 
@@ -18,13 +19,26 @@ const Main = () => {
   const getfeedbacks = async (e) => {
 
     await axios.get("http://localhost:3000/getallfeedbacks").then((response) => {
-console.log(response.data)
+
       setfeedbacks(response.data);
       //  console.log(feedbacks)
 
 
     });
   }
+
+
+  
+  const getgraphcount = async (e) => {
+    console.log('abc')
+    await axios.get("http://localhost:3000/run-python").then((response) => {
+
+       console.log(response.data)
+
+
+    });
+  }    
+  
   const getmessages = async (e) => {
 
     await axios.get("http://localhost:3000/getallmessage").then((response) => {
@@ -40,8 +54,7 @@ console.log(response.data)
     await axios.get("http://localhost:3000/getallcategories").then((response) => {
 
       setcategories(response.data);
-       console.log(categories)
-
+     
 
     });
   }
@@ -49,6 +62,7 @@ console.log(response.data)
     getcategories()
     getmessages()
     getfeedbacks()
+
   }, [])
   // Transform categories data for the chart
 // Extract category names for the chart
@@ -58,55 +72,7 @@ const chartData = categories.map((categories) => ({
   "uv":categories.count,
 
 }));
-const data=[{
-  "name":"Inheritance",
-  "uv":50,
 
-
-
-},
-
-{
-  "name":"Marriage",
-  "uv":40
-
-
-},
-
-{
-  "name":"Corruption",
-  "uv":30
-
-
-},
-{
-  "name":"Criminal",
-  "uv":20
-
-
-},
-{
-  "name":"Corruption",
-  "uv":30
-
-
-},{
-  "name":"Corruption",
-  "uv":30
-
-
-},{
-  "name":"Corruption",
-  "uv":40
-
-
-},{
-  "name":"Divorce",
-  "uv":10
-
-
-}
-]
 
   return (
  
@@ -170,9 +136,15 @@ const data=[{
             <Legend />
             <Bar dataKey="uv" fill="#1D4537"  barSize={40} barGap={15}/>
           </BarChart>
-        </Col>  <Row>
-        </Row>
+        </Col>  
+        <Row className=" justify-content-center mt-3 mb-3" >
+            <Button  style={{ maxWidth: '300px', width: '50%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark" onClick={getgraphcount} >
+       Refresh Graph
+      </Button>   </Row>
       </Row>
+
+      
+
     </div>
 
   )

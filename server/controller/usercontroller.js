@@ -24,6 +24,7 @@ const CreateUser = async (req, res) => {
    
 };
 
+
 const userLoginController =  async (req, res) => {
  
   const { email, password } = req.body;
@@ -40,6 +41,7 @@ const userLoginController =  async (req, res) => {
 
   }
 };
+
 
 const GetOneuser = async (req, res) => {
     const id = req.params.id;

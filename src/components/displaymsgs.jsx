@@ -9,6 +9,7 @@ import { AiTwotoneDelete } from "react-icons/ai";
 import SideNavbar from "./sidebar";
 import {AiFillSave} from "react-icons/ai";
 import SideBar from './sidebar';
+import { Container,Row, Col ,Card , Button} from 'react-bootstrap';
 
 const Displaymessages = (props) => {
   const [messages, setmessages] = useState([]);
@@ -27,9 +28,8 @@ const Displaymessages = (props) => {
 
     });
   }
-  const showing = () => {
-    setshow(!show)
-  }
+
+
 
   const updatemsg = async (id) => {
    
@@ -47,17 +47,31 @@ const Displaymessages = (props) => {
       alert("Enter some content");
      }
 }
-  const DeleteMessage = async (id) => {
+const Deletemessages = async (id) => {
 
-    await axios.delete("http://localhost:3000/deletemessage/" + id)
-      .then(() => {
-   
-        showing()
-        
-      })
+  await axios.delete("http://localhost:3000/deletemessages")
+    .then(() => {
+ 
+      showing()
+      
+    })
 
+}
+
+const DeleteMessage = async (id) => {
+
+  await axios.delete("http://localhost:3000/deletemessage/" + id)
+    .then(() => {
+ 
+      showing()
+      
+    })
+
+}
+
+  const showing = () => {
+    setshow(!show)
   }
-
 
   useEffect(() => {
     getmessages();
@@ -112,6 +126,13 @@ const Displaymessages = (props) => {
 
 
         <div className="row">
+        <div className="col-12 mt-3 text-center text-md-end " >
+
+
+<Button style={{ maxWidth: '300px', width: '50%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark"  onClick={Deletemessages}>
+  Delete All Questions?
+</Button>
+</div>
           <div className="col-lg-12 col-12 grid-margin" style={{ margin:'2%', width: '100%', marginTop: '1%' }}>
             <div className="card">
 

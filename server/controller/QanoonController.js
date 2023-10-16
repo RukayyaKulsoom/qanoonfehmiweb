@@ -12,7 +12,6 @@ const Allvolume = async (req, res) => {
     else {
         console.log("No volume data")
         res.json("No volume data");
-        
     }
 }
 const Allmessages= async (req, res) => {
@@ -96,7 +95,6 @@ const GetOnevolume = async (req, res) => {
   }
 };
 
-
 const Updatevolume = async (req, res) => {
     const {  name,content } = req.body;
     const id =req.params.id
@@ -112,6 +110,7 @@ const Updatevolume = async (req, res) => {
        res.json("volume Not Updated");
   }
 };
+
 
 const Updatemsg= async (req, res) => {
   const {  msg } = req.body;
@@ -167,6 +166,16 @@ const DeleteAllFeedbacks = async (req, res) => {
   }
 };
 
+const DeleteAllmessages = async (req, res) => {
+  try {
+    const deleteResult = await message.deleteMany();
+    console.log(`${deleteResult.deletedCount} messages deleted successfully`);
+    res.json(`${deleteResult.deletedCount} messages deleted successfully`);
+  } catch (error) {
+    console.error("Error deleting messages:", error);
+    res.status(500).json("Error deleting messages");
+  }
+};
 
 
 const Deletemessage = async (req, res) => {
@@ -222,10 +231,8 @@ const Allcategory= async (req, res) => {
   else {
       console.log("No category data")
       res.json("No category data");
-      
   }
 }
-
 
 
 const Updatecategory= async (req, res) => {
@@ -234,15 +241,13 @@ const Updatecategory= async (req, res) => {
 const categorydata = await Category.findById(id);
 if (categorydata) {
   categorydata.category = category
-
-
     const updatecategory = await categorydata.save()
     res.json(updatecategory)
 } else {
     console.log("category Not Updated");
      res.json("category Not Updated");
 }
-};
+}; 
 module.exports = {
   Allvolume,
   Createvolume,
@@ -261,5 +266,5 @@ module.exports = {
   Deletecategory,
   Allcategory,
   Updatecategory,
-
+  DeleteAllmessages
 };

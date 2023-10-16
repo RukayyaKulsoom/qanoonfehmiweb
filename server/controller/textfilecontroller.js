@@ -17,6 +17,22 @@ const uploadTextFile = async (req, res) => {
   }
 };
 
+
+const Createtext = async (req, res) => {
+  const {  content} = req.body;
+  
+  const volumedata = await TextFile.create({  content })
+
+if (volumedata) {
+  console.log(volumedata);
+  res.json(volumedata);
+} else {
+    console.log("volume Not Created");
+    res.json("volume Not Created");
+}
+};
+
 module.exports = {
-  uploadTextFile
+  uploadTextFile,
+  Createtext
 };
