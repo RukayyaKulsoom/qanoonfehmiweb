@@ -53,13 +53,12 @@ const SideBar = () => {
 
         <CDBSidebarContent className="sidebar-content" style={{ fontsize: 20}}>
           <CDBSidebarMenu>
-           
 
             <NavLink exact to="/home" activeClassName="activeClicked" >
-              <CDBSidebarMenuItem icon="home">
+              <CDBSidebarMenuItem icon="home" className=" brown-hover ">
                 <h5
-                  className="pt-2"
-                  style={{ fontWeight: 300, marginLeft: 20, fontsize: 15 }}
+                  className="pt-2 brown-hover "
+                  style={{ fontWeight: 300, marginLeft: 20}}
                 >
                   {" "}
                   Home 
@@ -68,11 +67,10 @@ const SideBar = () => {
             </NavLink>
 
             <NavLink exact to="/displayfiles" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="file">
-
+              <CDBSidebarMenuItem icon="file" className=" brown-hover ">
                 <h5
-                  className="pt-2"
-                  style={{ fontWeight: 300, marginLeft: 20, fontsize: 22 }}
+                  className="pt-2 brown-hover "
+                  style={{ fontWeight: 300, marginLeft: 20}}
                 >
                   {" "}
                   My Files 
@@ -83,9 +81,9 @@ const SideBar = () => {
 
        
             <NavLink exact to="/modeltraining" activeClassName="activeClicked" >
-              <CDBSidebarMenuItem icon="credit-card">
+              <CDBSidebarMenuItem icon="credit-card" className=" brown-hover ">
                 <h5
-                  className="pt-2"
+                  className="pt-2 brown-hover "
                   style={{ fontWeight: 300, marginLeft: 20, fontsize: 22 }}
                 >
                   {" "}
@@ -95,9 +93,9 @@ const SideBar = () => {
             </NavLink>
 
             <NavLink exact to="/displaymessages" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="question">
+              <CDBSidebarMenuItem icon="question" className=" brown-hover ">
                 <h5
-                  className="pt-2"
+                  className="pt-2 brown-hover "
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}
                 >
                   {" "}
@@ -108,8 +106,10 @@ const SideBar = () => {
             {/* chart-line */}
 
             <NavLink exact to="/users" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="users">
-                <h5 className="pt-2" style={{  marginLeft: 20,fontWeight: 300, fontsize: 19 }}>
+              <CDBSidebarMenuItem icon="users" className=" brown-hover ">
+                
+                <h5                   className="pt-2 brown-hover "
+ style={{  marginLeft: 20,fontWeight: 300, fontsize: 19 }}>
                 User Management  <br /> (Admin only)
                 </h5>
               </CDBSidebarMenuItem>
@@ -117,9 +117,9 @@ const SideBar = () => {
             {/* exclamation-circle */}
 
             <NavLink exact to="/texteditor" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="book">
+              <CDBSidebarMenuItem icon="book" className=" brown-hover ">
                 <h5
-                  className="pt-2"
+                  className="pt-2 brown-hover "
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}
                 >
                   {" "}
@@ -130,9 +130,9 @@ const SideBar = () => {
 
 
             <NavLink exact to="/displayfeedbacks" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="sticky-note">
+              <CDBSidebarMenuItem icon="sticky-note" className=" brown-hover ">
                 <h5
-                  className="pt-2"
+                  className="pt-2 brown-hover "
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}
                 >
                   {" "}
@@ -142,9 +142,9 @@ const SideBar = () => {
             </NavLink>
 
             <NavLink exact to="/addcategory" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="th-large">
+              <CDBSidebarMenuItem icon="th-large" className=" brown-hover ">
                 <h5
-                  className="pt-2"
+                  className="pt-2 brown-hover "
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}
                 >
                   {" "}
@@ -154,9 +154,9 @@ const SideBar = () => {
             </NavLink>
 
             <NavLink exact to="/allcategories" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="th">
+              <CDBSidebarMenuItem icon="th" className=" brown-hover ">
                 <h5
-                  className="pt-2"
+                  className="pt-2 brown-hover "
                   style={{ fontWeight: 300,marginLeft: 20, fontsize: 19 }}
                 >
                   {" "}
@@ -164,15 +164,18 @@ const SideBar = () => {
                 </h5>
               </CDBSidebarMenuItem>
             </NavLink>
-
-    
-
           </CDBSidebarMenu>
         </CDBSidebarContent>
-
-    
       </CDBSidebar>
     </div>
   );
 };
 export default SideBar;
+
+
+
+
+
+
+
+
