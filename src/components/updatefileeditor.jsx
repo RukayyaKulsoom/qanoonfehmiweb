@@ -6,12 +6,13 @@ import axios from "axios";
 import "./App.css";
 import Navbar from "./navbar";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useNavigate } from 'react-router-dom';
 
 const Updatefileeditor = () => {
     const [value, setValue] = useState("");
     const [title, settitle] = useState("");
-
-
+    const navigate = useNavigate();
+    
     const getValues = async () => {
         const id = await AsyncStorage.getItem('fileid')
         await axios.get("http://localhost:3000/getoneqanoon/" + id).then((data) => {
@@ -52,6 +53,9 @@ const Updatefileeditor = () => {
                 alert("Enter some content");
             }
         });
+        navigate('/displaymessages');
+
+         // Use the correct screen name defined in your navigation setup
         // const data = documment.querySelector(".golang").innerHTML;
     }
     const getValue = (value) => {

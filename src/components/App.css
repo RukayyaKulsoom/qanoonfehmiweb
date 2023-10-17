@@ -339,6 +339,16 @@
   animation: float 5s ease-in-out infinite;
 
 }
+.sliding-div2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 97%;
+  background-color: white;
+  animation: floa 5s ease-in-out infinite;
+
+}
 
 @keyframes float {
   0% {
@@ -349,6 +359,16 @@
     transform: translateY(-68px);
   }
 }
+@keyframes floa{
+  0% {
+    transform: translateY(0);
+  }
+ 
+  100% {
+    transform: translateY(-129px);
+  }
+}
+
 .brown-hover:hover {
   color:#E2AE90;
 }
@@ -357,6 +377,26 @@
 }
 
 
+.sliding-div3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 97%;
+  background-color: white;
+  animation: floa1 5s ease-in-out infinite;
+
+}
+
+@keyframes floa1 {
+  0% {
+    transform: translateY(0);
+  }
+ 
+  100% {
+    transform: translateY(-160px);
+  }
+}
 
 
 

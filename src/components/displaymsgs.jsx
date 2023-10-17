@@ -104,7 +104,7 @@ const DeleteMessage = async (id) => {
       <SideBar />
 
       <div className="row " style={{ width: '100%', marginTop:'1%',  overflow:'auto',height:'100vh' }}>
-        <div className='mb-5' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none' }}>
+        <div className='' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none',height:'65px' }}>
 
 
 
@@ -129,11 +129,11 @@ const DeleteMessage = async (id) => {
         <div className="col-12 mt-3 text-center text-md-end " >
 
 
-<Button style={{ maxWidth: '300px', width: '50%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark"  onClick={Deletemessages}>
-  Delete All Questions?
+<Button style={{ maxWidth: '230px', width: '50%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark"  onClick={Deletemessages}>
+  Delete All Questions
 </Button>
 </div>
-          <div className="col-lg-12 col-12 grid-margin" style={{ margin:'2%', width: '100%', marginTop: '1%' }}>
+          <div className="col-lg-12 col-12 grid-margin" style={{ margin:'1%', width: '100%', marginTop: '1%' }}>
             <div className="card">
 
               <div className="card-body">
@@ -187,7 +187,7 @@ const DeleteMessage = async (id) => {
                               <br />
                               <button
                               style={{
-                                width: '15%',
+                                width: '30%',
                                 height:'20%',
                                 color: 'white',
                                 backgroundColor: '#1B4235', 
@@ -229,11 +229,11 @@ const DeleteMessage = async (id) => {
 
 
                           <td>
-                            <button style={{
+                            <button onClick={() => DeleteMessage(searchResults._id)} style={{
                               textDecoration: 'none', backgroundColor: 'white', borderWidth: 0
 
 
-                            }}> <AiTwotoneDelete style={{ fontSize: '25px', color: '#1B4235' }} onClick={() => DeleteMessage(searchResults._id)} />
+                            }}> <AiTwotoneDelete style={{ fontSize: '25px', color: '#1B4235' }}  />
 
 
                             </button>  </td>

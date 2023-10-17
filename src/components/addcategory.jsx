@@ -62,8 +62,14 @@ const Category = () => {
             <Container className="container">
               <Row className="justify-content-center">
                 <Col xs="auto" className="text-center">
-                  <div className="img-responsive">
-                    <img src={require('./images/ljcp.jpg')} alt="face" style={{ maxWidth: '50%', height: 'auto' }} />
+                  <div className="img-responsive" style={{ position: "relative", overflow: "hidden" }}
+                  >
+                    <img
+                     src={require('./images/ljcp.jpg')} alt="face"
+                      class="img-fluid"
+                      style={{ maxWidth: '50%', height: 'auto' }}
+                    />
+                    <div class="sliding-div3"></div>
                   </div>
                   <Card.Text style={{ fontWeight: 'bold', fontSize: 19, marginTop: '5%' }}>
                     ADD CATEGORY FORM

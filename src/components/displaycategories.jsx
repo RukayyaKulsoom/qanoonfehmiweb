@@ -91,7 +91,7 @@ const Displaycategory = (props) => {
       <SideBar />
 
       <div className="row " style={{ width: '100%', marginTop:'1%',  overflow:'auto',height:'100vh' }}>
-        <div className='mb-5' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none' }}>
+        <div className='' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none',    height: '65px' }}>
 
 
 
@@ -113,7 +113,7 @@ const Displaycategory = (props) => {
 
 
         <div className="row">
-          <div className="col-lg-12 col-12 grid-margin" style={{ margin:'2%', width: '100%', marginTop: '1%' }}>
+          <div className="col-lg-12 col-12 grid-margin" style={{ marginLeft:'3%', width: '97%' }}>
             <div className="card">
 
               <div className="card-body">
@@ -121,7 +121,7 @@ const Displaycategory = (props) => {
                 <div style={{
                   textAlign: 'left'
                 }} >
-                  <h4 className="card-title" > Category </h4>
+                  <h4 className="card-title" > Categories </h4>
 
                 </div>
                 <p className="card-description"> Total : {category.length}

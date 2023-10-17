@@ -92,7 +92,7 @@ console.log(response.data)
 
       <div className="row " style={{ width: '100%', marginTop:'1%',  overflow:'auto' }}>
 
-        <div className='mb-1' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none' }}>
+        <div className='mb-1' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none'   ,  height: '65px'}}>
 
           <form action="/search" >
 
@@ -115,8 +115,8 @@ console.log(response.data)
         <div className="col-12 mt-3 text-center text-md-end " >
 
 
-      <Button style={{ maxWidth: '300px', width: '50%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark"  onClick={Deletefeedbacks}>
-        Delete All Feedbacks?
+      <Button style={{ maxWidth: '230px', width: '30%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark"  onClick={Deletefeedbacks}>
+        Delete All Feedbacks
       </Button>
     </div>
           <div className="col-lg-12 col-12 grid-margin mb-3" style={{ margin:'2%', width: '100%', marginTop: '1%' }}>

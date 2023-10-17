@@ -108,7 +108,7 @@ const Users = () => {
     <SideBar />
       
     <div className="row " style={{ width: '100%', marginTop:'1%',  overflow:'auto',height:'100vh' }}>
-        <div className='mb-5' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none' }}>
+        <div className='mb-3' style={{ flexDirection: 'row', marginBottom: 5, width: '100%', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', borderRadius: 0, border: 'none' ,height:'65px'}}>
           <form action="/search">
             <input
               type="text"
@@ -127,12 +127,10 @@ const Users = () => {
             <div className="card-body">
               <h4 className="card-title">Added Users</h4>
               <p className="card-description">Total Users: {users.length}</p>
-           
-
               <div className="col-12 mt-3 text-center text-md-end " >
 
 <Link to="/signup">
-      <Button style={{ maxWidth: '300px', width: '50%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark" >
+      <Button style={{ maxWidth: '200px', width: '50%', backgroundColor:'#1B4235' , margin:"1%"}}  className="btn btn-dark" >
         Add User
       </Button></Link>
     </div>
@@ -174,12 +172,12 @@ const Users = () => {
                               <br />
                               <button
                                 style={{
-                                  width: '60%',
+                                  width: '100%',
                                   height: '20%',
                                   color: 'white',
                                   backgroundColor: '#1B4235',
                                   marginTop: '1%',
-                                  marginLeft: '15%',
+                                  marginLeft: '1%',
                                   borderWidth: 0,
                                 }}
                                 onClick={() => {
@@ -209,12 +207,12 @@ const Users = () => {
                               <br />
                               <button
                                 style={{
-                                  width: '60%',
+                                  width: '100%',
                                   height: '20%',
                                   color: 'white',
                                   backgroundColor: '#1B4235',
                                   marginTop: '1%',
-                                  marginLeft: '15%',
+                                  marginLeft: '1%',
                                   borderWidth: 0,
                                 }}
                                 onClick={() => {
@@ -279,12 +277,12 @@ const Users = () => {
                               <br />
                               <button
                                 style={{
-                                  width: '50%',
+                                  width: '70%',
                                   height: '20%',
                                   color: 'white',
                                   backgroundColor: '#1B4235',
                                   marginTop: '1%',
-                                  marginLeft: '15%',
+                                  marginLeft: '10%',
                                   borderWidth: 0,
                                 }}
                                 onClick={() => {
@@ -310,18 +308,18 @@ const Users = () => {
                                   minHeight: '60px',
                                   height: 'auto',
                                   resize: 'vertical',
-                                  width: '80%',
+                                  width: '90%',
                                 }}
                               />
                               <br />
                               <button
                                 style={{
-                                  width: '50%',
+                                  width: '80%',
                                   height: '20%',
                                   color: 'white',
                                   backgroundColor: '#1B4235',
                                   marginTop: '1%',
-                                  marginLeft: '15%',
+                                  marginLeft: '10%',
                                   borderWidth: 0,
                                 }}
                                 onClick={() => {
@@ -346,18 +344,18 @@ const Users = () => {
                                   minHeight: '60px',
                                   height: 'auto',
                                   resize: 'vertical',
-                                  width: '80%',
+                                  width: '90%',
                                 }}
                               />
                               <br />
                               <button
                                 style={{
-                                  width: '50%',
+                                  width: '80%',
                                   height: '20%',
                                   color: 'white',
                                   backgroundColor: '#1B4235',
                                   marginTop: '1%',
-                                  marginLeft: '15%',
+                                  marginLeft: '10%',
                                   borderWidth: 0,
                                 }}
                                 onClick={() => {
@@ -387,12 +385,12 @@ const Users = () => {
                               <br />
                               <button
                                 style={{
-                                  width: '50%',
+                                  width: '100%',
                                   height: '20%',
                                   color: 'white',
                                   backgroundColor: '#1B4235',
                                   marginTop: '1%',
-                                  marginLeft: '15%',
+                                  marginLeft: '1%',
                                   borderWidth: 0,
                                 }}
                                 onClick={() => {
