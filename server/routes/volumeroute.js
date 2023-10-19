@@ -65,9 +65,8 @@ router.get('/run-python',  async (req, res) => {
   const combinedData = {
     messages: msg,
     categories: categoryNames
-   
   };
-  const pythonProcess = spawn('python', ['F:/7th semester/aasaanqanoon/asan-qanoon--main/server/controller/graph.py',JSON.stringify(combinedData)]);
+  const pythonProcess = spawn('python3', ['/Users/ramisha/Desktop/fyp2/qanoonfehmiweb/server/controller/graph.py',JSON.stringify(combinedData)]);
   let outputData = '';
 
   pythonProcess.stdout.on('data', (data) => {

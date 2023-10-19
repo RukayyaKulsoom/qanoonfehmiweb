@@ -100,7 +100,7 @@ const Signup = () => {
 
                     alert(response.data.error); // Show an alert message with the error
                 } else {
-                    navigate("/login")
+                    navigate("/users")
                 }
             } catch (error) {
                 console.error(error);

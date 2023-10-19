@@ -113,7 +113,7 @@ const Main = () => {
       </Row>
       <Row
         className="blur-background justify-content-center"
-        style={{ marginTop: "-89px" }}
+        style={{ marginTop: "-25px" }}
       >
         {/* <Col md={6} sm={12} xs={12} style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',margin: '20px' }}>
           <LineChart width={500} height={300} data={data}>

@@ -53,7 +53,7 @@ const Updatefileeditor = () => {
                 alert("Enter some content");
             }
         });
-        navigate('/displaymessages');
+        navigate('/displayfiles');
 
          // Use the correct screen name defined in your navigation setup
         // const data = documment.querySelector(".golang").innerHTML;

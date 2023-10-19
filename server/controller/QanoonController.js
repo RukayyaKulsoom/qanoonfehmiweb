@@ -5,7 +5,9 @@ var Category = require("../Models/category")
 
 const Allvolume = async (req, res) => {
     const volumedata = await volume.find()
-    if (volumedata !== []) {
+    
+
+    if (volumedata.length !== 0) {
         console.log(volumedata)
         res.json(volumedata)
     }
@@ -16,7 +18,7 @@ const Allvolume = async (req, res) => {
 }
 const Allmessages= async (req, res) => {
   const messagedata = await message.find()
-  if (messagedata !== []) {
+  if (messagedata.length !== 0) {
       console.log(messagedata)
       res.json(messagedata)
   }
@@ -30,7 +32,7 @@ const Allmessages= async (req, res) => {
 
 const Allfeedback= async (req, res) => {
   const Feedbackdata = await feedback.find()
-  if (Feedbackdata !== []) {
+  if (Feedbackdata.length !== 0) {
       console.log(Feedbackdata)
       res.json(Feedbackdata)
   }
@@ -224,8 +226,8 @@ if (result.deletedCount === 1) {
 
 const Allcategory= async (req, res) => {
   const categorydata = await Category.find()
-  if (categorydata !== []) {
-      console.log(categorydata)
+  if (categorydata.length !== 0) {
+    console.log(categorydata)
       res.json(categorydata)
   }
   else {
