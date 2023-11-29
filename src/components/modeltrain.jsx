@@ -72,9 +72,6 @@ useEffect(() => {
 
   const handleUploadn = async (event) => {
     event.preventDefault();
-
-
-
     try {
       const response = await axios.post('http://localhost:3000/uploadtext', { content: data });
       setMessage(response.data.message);
@@ -91,12 +88,8 @@ useEffect(() => {
 
   const handleUpload = async (event) => {
     event.preventDefault();
-
-
-
     const formData = new FormData();
     formData.append('file', file);
-
     try {
       const response = await axios.post('http://localhost:3000/uploadfile', formData);
       setMessage(response.data.message);

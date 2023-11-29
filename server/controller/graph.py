@@ -12,7 +12,7 @@ import time
 
 import pinecone
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 
 def get_similar_messages(query_text,k):
